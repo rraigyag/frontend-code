@@ -24,7 +24,7 @@ function AddEditTransaction({ showAddEditTransactionModal, setShowAddEditTransac
                 getTransactions();
                 message.success("Transaction Updated successfully");
             } else {
-                await axios.post("/api/transactions/add-transaction", {
+                await axios.post("om-expenses.onrender.com/api/transactions/add-transaction", {
                     ...values,
                     userid: user._id,
                 });
