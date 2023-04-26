@@ -14,7 +14,7 @@ function AddEditTransaction({ showAddEditTransactionModal, setShowAddEditTransac
             const user = JSON.parse(localStorage.getItem('domestic-expenditure-auditing'));
             setLoading(true);
             if (selectedItemForEdit) {
-                await axios.post("/api/transactions/edit-transaction", {
+                await axios.post("om-expenses.onrender.com/api/transactions/edit-transaction", {
                     payload: {
                         ...values,
                         userid: user._id,
